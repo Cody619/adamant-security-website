@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adamant Security</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== Top Header ===== -->
+    <header class="topbar" id="topbar">
+      <div class="wrap">
+        <!-- Left: Brand -->
+        <a class="brand" href="#">
+          <img src="images/logo.png" alt="logo" />
+        </a>
+
+        <!-- Center: Nav -->
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="menu" id="menu">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <!-- Right: CTA -->
+        <a class="btn-quote" href="#quote">Get Quote</a>
+      </div>
+    </header>
+
+    <!--section hero-->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <!-- left: copy -->
+        <div class="hero-copy">
+          <span class="badge">
+            <span class="dot" aria-hidden="true"></span>
+            Professional Security Solutions
+          </span>
+
+          <h1 class="hero-title">
+            Complete Security &<br />
+            Low Voltage Systems
+          </h1>
+
+          <p class="hero-lead">
+            Professional installation of CCTV, intercoms, access controls, and low voltage wiring
+            for homes and businesses.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#services" class="btn btn-primary">
+              <span>View Services</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 5l7 7-7 7M4 12h16" /></svg>
+            </a>
+
+            <a href="#contact" class="btn btn-ghost">
+              <span class="play" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7-11-7z" /></svg>
+              </span>
+              Free Consultation
+            </a>
+          </div>
+
+          <hr class="hero-divider" />
+
+          <div class="stats">
+            <div class="stat">
+              <div class="num" data-target="2000">0</div>
+              <div class="label">Installations</div>
+            </div>
+            <div class="stat">
+              <div class="num" data-target="15">0</div>
+              <div class="label">Years Experience</div>
+            </div>
+            <div class="stat">
+              <div class="num" data-target="24" data-suffix="/7">0</div>
+              <div class="label">Support</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- right: image card -->
+        <figure class="hero-art">
+          <img
+            src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1600&auto=format&fit=crop"
+            alt="CCTV cameras on a building"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <!--section equipment-->
+
+    <section class="section section-headline" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">
+            <span class="dot" aria-hidden="true"></span>
+            Security Equipment
+          </span>
+          <h2 class="section-title">Professional Security Solutions</h2>
+          <p class="section-subtitle">
+            Explore our comprehensive range of state-of-the-art security equipment designed to
+            protect your property and provide peace of mind.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- section for colum-->
+
+    <section class="section products" id="products">
+      <div class="container">
+        <div class="grid-products">
+          <!-- Card 1 -->
+          <article class="product-card">
+            <span class="pc-badge">Most Popular</span>
+            <div class="pc-media">
+              <img
+                src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1200&auto=format&fit=crop"
+                alt="CCTV camera"
+              />
+            </div>
+            <div class="pc-body">
+              <h3 class="pc-title">Professional CCTV</h3>
+              <p class="pc-meta">🔒 Certified</p>
+              <p class="pc-desc">
+                High-definition surveillance camera with night vision and weatherproof design.
+              </p>
+              <ul class="pc-features">
+                <li>4K Resolution</li>
+                <li>Night Vision</li>
+                <li>IP66 Weatherproof</li>
+                <li>Motion Detection</li>
+              </ul>
+
+              <!-- кнопка всегда прижата вниз -->
+              <div class="pc-cta">
+                <a href="#quote" class="btn-ghost-outline">
+                  <span class="ph">📞</span> Get Quote
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="product-card">
+            <span class="pc-badge">Latest Tech</span>
+            <div class="pc-media">
+              <img
+                src="https://images.unsplash.com/photo-1601979031925-424e53b6caaa?q=80&w=1200&auto=format&fit=crop"
+                alt="Smart intercom"
+              />
+            </div>
+            <div class="pc-body">
+              <h3 class="pc-title">Smart Intercom System</h3>
+              <p class="pc-meta">🔒 Certified</p>
+              <p class="pc-desc">
+                Advanced door communication with video calling and remote access.
+              </p>
+              <ul class="pc-features">
+                <li>Video Calling</li>
+                <li>Remote Unlock</li>
+                <li>Mobile App Control</li>
+                <li>Two-Way Audio</li>
+              </ul>
+              <div class="pc-cta">
+                <a href="#quote" class="btn-ghost-outline">
+                  <span class="ph">📞</span> Get Quote
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="product-card">
+            <span class="pc-badge">Professional</span>
+            <div class="pc-media">
+              <img
+                src="https://images.unsplash.com/photo-1591604129939-9a3bdb2623d9?q=80&w=1200&auto=format&fit=crop"
+                alt="Alarm panel"
+              />
+            </div>
+            <div class="pc-body">
+              <h3 class="pc-title">Security Alarm Panel</h3>
+              <p class="pc-meta">🔒 Certified</p>
+              <p class="pc-desc">
+                Comprehensive alarm control with smartphone integration and 24/7 monitoring.
+              </p>
+              <ul class="pc-features">
+                <li>Touch Screen</li>
+                <li>Wireless Sensors</li>
+                <li>Smart Alerts</li>
+                <li>Battery Backup</li>
+              </ul>
+              <div class="pc-cta">
+                <a href="#quote" class="btn-ghost-outline">
+                  <span class="ph">📞</span> Get Quote
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="product-card">
+            <span class="pc-badge">Secure</span>
+            <div class="pc-media">
+              <img
+                src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?q=80&w=1200&auto=format&fit=crop"
+                alt="Access keypad"
+              />
+            </div>
+            <div class="pc-body">
+              <h3 class="pc-title">Access Control Keypad</h3>
+              <p class="pc-meta">🔒 Certified</p>
+              <p class="pc-desc">
+                Secure entry system with keycode and proximity card access management.
+              </p>
+              <ul class="pc-features">
+                <li>Keycode Entry</li>
+                <li>RFID Cards</li>
+                <li>User Management</li>
+                <li>Entry Logging</li>
+              </ul>
+              <div class="pc-cta">
+                <a href="#quote" class="btn-ghost-outline">
+                  <span class="ph">📞</span> Get Quote
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!--бегущая строка-->
+
+    <section class="section partners" id="partners">
+      <div class="container">
+        <header class="partners-head">
+          <h2 class="partners-title">Brands We Work With</h2>
+          <p class="partners-subtitle">
+            Trusted partners for residential & commercial security systems.
+          </p>
+        </header>
+
+        <div class="partners-text">
+          <p>
+            Adamant Security is a trusted installer for residential and commercial security systems.
+            We are focused on providing newest security products, such as: wireless touchpad alarm
+            systems, IP-cameras, networking, Wifi, intercom, access control solutions for our
+            clients. We carry the best brands in industry to satisfy your needs, either it's home or
+            business.
+          </p>
+
+          <p>
+            Our certified technicians will go above and beyond to provide the best quality of
+            installation and ongoing support. Contact us to book an appointment with our
+            technicians, to visit your property and assess your security needs. Our team will design
+            a proper security system to meet and exceed your expectations.
+          </p>
+
+          <p>
+            Just click get a free quote and leave your information and we will get back to you as
+            soon as possible.
+          </p>
+
+          <p>
+            In an increasingly interconnected world, securing our devices and networks from
+            potential threats has become a paramount concern. Trusted security device brands play a
+            critical role in providing robust protection of your property.
+          </p>
+
+          <p>
+            That's why Adamant Security working with various reputable security device brands that
+            have gained trust and recognition for their commitment to delivering reliable and
+            effective security solutions.
+          </p>
+        </div>
+
+        <!-- бегущая строка брендов -->
+        <div class="brands-marquee" aria-label="Brands we work with">
+          <div class="brands-track">
+            <!-- group 1 -->
+            <div class="brands-group">
+              <div class="brand-item">
+                <img src="images/clients/logo_clients.png" alt="Brand 1" />
+              </div>
+              <div class="brand-item">
+                <img src="images/clients/logo_clients2.png" alt="Brand 2" />
+              </div>
+              <div class="brand-item">
+                <img src="images/clients/logo_clients3.png" alt="Brand 3" />
+              </div>
+              <div class="brand-item">
+                <img src="images/clients/logo_clients4.png" alt="Brand 4" />
+              </div>
+              <div class="brand-item">
+                <img src="images/clients/logo_clients5.png" alt="Brand 5" />
+              </div>
+              <div class="brand-item">
+                <img src="images/clients/logo_clients6.png" alt="Brand 6" />
+              </div>
+            </div>
+
+            <!-- group 2 (copy) -->
+            <div class="brands-group" aria-hidden="true">
+              <div class="brand-item">
+                <img src="images/clients/logo_clients.png" alt="Brand 1.1" />
+              </div>
+              <div class="brand-item">
+                <img src="images/clients/logo_clients2.png" alt="Brand 1.2" />
+              </div>
+              <div class="brand-item">
+                <img src="images/clients/logo_clients3.png" alt="Brand 1.3" />
+              </div>
+              <div class="brand-item">
+                <img src="images/clients/logo_clients4.png" alt="Brand 1.4" />
+              </div>
+              <div class="brand-item">
+                <img src="images/clients/logo_clients5.png" alt="Brand 1.5" />
+              </div>
+              <div class="brand-item">
+                <img src="images/clients/logo_clients6.png" alt="Brand 1.6" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer-->
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <!-- Brand / short info -->
+        <div class="footer-col">
+          <h3 class="footer-title">Adamant Security</h3>
+          <p class="footer-text">
+            Professional residential & commercial security systems installation. Certified
+            technicians, trusted brands, and ongoing support.
+          </p>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact</h4>
+
+          <ul class="footer-list">
+            <li>
+              <span class="label">E-mail:</span>
+              <a href="mailto:hello.adamant@gmail.com">hello.adamant@gmail.com</a>
+            </li>
+
+            <li>
+              <span class="label">Phone:</span>
+              <a href="tel:+18774011698">(877) 401-1698</a><br />
+              <a href="tel:+16043994232">(604) 399-4232</a>
+            </li>
+
+            <li>
+              <span class="label">Address:</span>
+              <address>
+                501-3292, Production Way,<br />
+                Burnaby, BC, CA V5A 4R4
+              </address>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Legal</h4>
+
+          <ul class="footer-list">
+            <li><span class="label">Licence#:</span> 00177570</li>
+            <li><span class="label">Insurance#:</span> SR082165</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- bottom bar -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <p>© 2026 Adamant Security. All rights reserved.</p>
+      
+          <p class="footer-credit">
+            Designed & Developed by <span>Dmitriy Povoliaiev</span>
+          </p>
+        </div>
+      </div>
+      
+
+    <!--create by Cody ^_^-->
+
+    <script src="main.js"></script>
+  </body>
+</html>
