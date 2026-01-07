@@ -36,3 +36,4 @@ To run the project locally:
 git clone git@github.com:Cody619/adamant-security-website.git
 cd adamant-security-website
 open index.html
+demo-live https://cody619.github.io/adamant-security-website/
