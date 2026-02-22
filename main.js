@@ -81,8 +81,62 @@ if (counters.length) {
         }
       });
     },
-    { threshold: 0.6 }
+    { threshold: 0.6 },
   );
+
+  // ===== Contact form validation (optional) =====
+  const quoteForm = document.getElementById("quoteForm");
+  const successMsg = document.getElementById("formSuccess");
+
+  function setError(name, message) {
+    const el = document.querySelector(`[data-error-for="${name}"]`);
+    if (el) el.textContent = message || "";
+  }
+
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  if (quoteForm) {
+    quoteForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const firstName = quoteForm.firstName.value.trim();
+      const lastName = quoteForm.lastName.value.trim();
+      const email = quoteForm.email.value.trim();
+
+      let ok = true;
+
+      setError("firstName", "");
+      setError("lastName", "");
+      setError("email", "");
+
+      if (!firstName) {
+        setError("firstName", "Please enter your first name.");
+        ok = false;
+      }
+      if (!lastName) {
+        setError("lastName", "Please enter your last name.");
+        ok = false;
+      }
+      if (!email) {
+        setError("email", "Please enter your email.");
+        ok = false;
+      } else if (!isValidEmail(email)) {
+        setError("email", "Please enter a valid email.");
+        ok = false;
+      }
+
+      if (!ok) return;
+
+      // Here we can send it to backend later (EmailJS, Formspree, server).
+      quoteForm.reset();
+      if (successMsg) {
+        successMsg.hidden = false;
+        setTimeout(() => (successMsg.hidden = true), 6000);
+      }
+    });
+  }
 
   counters.forEach((c) => io.observe(c));
 }
