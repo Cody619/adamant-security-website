@@ -71,11 +71,15 @@ if (menu) {
 }
 
 /* ===== services dropdown ===== */
+
 const servicesToggle = document.getElementById("servicesToggle");
 const servicesMenuItem = servicesToggle?.closest(".menu-item");
 
 if (servicesToggle && servicesMenuItem) {
   servicesToggle.addEventListener("click", (e) => {
+    if (window.innerWidth > 900) return;
+
+    e.preventDefault();
     e.stopPropagation();
 
     const isOpen = servicesMenuItem.classList.toggle("open");
@@ -83,6 +87,8 @@ if (servicesToggle && servicesMenuItem) {
   });
 
   document.addEventListener("click", (e) => {
+    if (window.innerWidth > 900) return;
+
     if (!servicesMenuItem.contains(e.target)) {
       servicesMenuItem.classList.remove("open");
       servicesToggle.setAttribute("aria-expanded", "false");

@@ -144,12 +144,10 @@ body {
     display: inline-flex;
     align-items: center;
     flex: 0 0 auto;
+    padding-bottom: 18px;
+    margin-bottom: -18px;
 }
-.menu-link.services-toggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-}
+
 .arrow-icon {
     width: 10px;
     height: 6px;
@@ -166,23 +164,23 @@ body {
     stroke-linecap: round;
     stroke-linejoin: round;
 }
-.menu-link.services-toggle:hover .arrow-icon {
-    opacity: 1;
-}
+
 /* поворот при открытии */
 .menu-item.open .arrow-icon {
     transform: rotate(180deg);
 }
+
 .submenu {
     position: absolute;
-    top: calc(100% + 14px);
+    top: 100%;
     left: 0;
     transform: translateY(10px);
     min-width: 260px;
     /* светлый */
-     backdrop-filter: blur(6px);
-    background: rgba(255, 255, 255, 0.85);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(15, 23, 42, 0.08);
     border-radius: 18px;
     padding: 12px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
@@ -201,15 +199,29 @@ body {
     padding: 12px 14px;
     border-radius: 12px;
     text-decoration: none;
-    color: var(--muted)
+    color: var(--muted);
     font-weight: 700;
     font-size: 18px;
     transition: background 0.2s ease, color 0.2s ease;
 }
 
 .submenu a:hover {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(15, 23, 42, 0.06);
     color: darkblue;
+}
+
+/* desktop hover */
+@media (min-width: 901px) {
+    .menu-item.has-dropdown:hover .submenu {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .menu-item.has-dropdown:hover .arrow-icon {
+        transform: rotate(180deg);
+    }
 }
 
 .menu-item.open .submenu {
@@ -336,10 +348,6 @@ body {
         gap: 6px;
     }
 
-        .menu-link.services-toggle:hover .arrow-icon {
-            opacity: 1;
-        }
-
     .menu>a:hover,
     .menu-link.services-toggle:hover {
         color: #000;
@@ -457,7 +465,96 @@ body {
     margin: 24px 0 18px;
     flex-wrap: wrap;
 }
+.hero-video {
+    position: relative;
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #0b1220;
+}
 
+.hero-bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: heroZoom 24s ease-in-out infinite alternate;
+    -webkit-animation: heroZoom 24s ease-in-out infinite alternate;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            rgba(8, 12, 22, 0.78) 0%,
+            rgba(8, 12, 22, 0.58) 38%,
+            rgba(8, 12, 22, 0.38) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-video .hero-grid {
+    grid-template-columns: 1fr;
+}
+
+.hero-video .hero-copy {
+    max-width: 760px;
+}
+
+.hero-video .badge {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.hero-video .badge .dot {
+    background: #fff;
+}
+
+.hero-video .hero-title {
+    color: #fff;
+}
+
+.hero-video .hero-lead {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.hero-video .hero-divider {
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.hero-video .stat .num {
+    color: #fff;
+}
+
+.hero-video .stat .label {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.hero-video .btn-ghost {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+.hero-video .btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.hero-video .play {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.hero-video .play svg {
+    fill: #fff;
+}
 /* кнопки */
 .btn {
     display: inline-flex;
@@ -1458,4 +1555,13 @@ body {
     color: #f5b301;
     font-size: 20px;
     line-height: 1;
+}
+@keyframes heroZoom {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.08);
+    }
 }

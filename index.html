@@ -54,9 +54,14 @@
     </header>
 
     <!--section hero-->
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <!-- left: copy -->
+    <section class="hero hero-video" id="home">
+      <video class="hero-bg-video" autoplay muted loop playsinline>
+        <source src="video/adamant_hero_section.mp4" type="video/mp4" />
+      </video>
+
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-grid hero-content">
         <div class="hero-copy">
           <span class="badge">
             <span class="dot" aria-hidden="true"></span>
@@ -76,12 +81,16 @@
           <div class="hero-actions">
             <a href="#services" class="btn btn-primary">
               <span>View Services</span>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 5l7 7-7 7M4 12h16" /></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13 5l7 7-7 7M4 12h16" />
+              </svg>
             </a>
 
-            <a href="#contact" class="btn btn-ghost">
+            <a href="contact.html#request" class="btn btn-ghost">
               <span class="play" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7-11-7z" /></svg>
+                <svg viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7-11-7z" />
+                </svg>
               </span>
               Free Consultation
             </a>
@@ -104,14 +113,6 @@
             </div>
           </div>
         </div>
-
-        <!-- right: image card -->
-        <figure class="hero-art">
-          <img
-            src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1600&auto=format&fit=crop"
-            alt="CCTV cameras on a building"
-          />
-        </figure>
       </div>
     </section>
 
