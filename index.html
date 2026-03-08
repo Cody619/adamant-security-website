@@ -22,7 +22,28 @@
 
         <nav class="menu" id="menu">
           <a href="#home">Home</a>
-          <a href="#services">Services</a>
+
+          <div class="menu-item has-dropdown">
+            <button
+              class="menu-link services-toggle"
+              id="servicesToggle"
+              aria-expanded="false"
+              aria-controls="servicesSubmenu"
+              type="button"
+            >
+              <span>Services</span>
+
+              <svg class="arrow-icon" viewBox="0 0 10 6" aria-hidden="true">
+                <path d="M1 1l4 4 4-4"></path>
+              </svg>
+            </button>
+
+            <div class="submenu" id="servicesSubmenu">
+              <a href="#services">All Services</a>
+              <a href="security-cameras.html">Security Cameras</a>
+            </div>
+          </div>
+
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
         </nav>
