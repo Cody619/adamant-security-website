@@ -1593,3 +1593,200 @@ body {
         transform: scale(1.08);
     }
 }
+
+/*секции о компании */
+
+.service-grid-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 1100px) {
+    .service-grid-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .service-grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Баннер */
+
+.cta-visual-banner {
+    padding: 24px 0;
+}
+
+.cta-banner-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 5px;
+    overflow: hidden;
+    background-image: url("images/adamant-banner-tech.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #07101f;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.cta-banner-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 68% center;
+    z-index: 0;
+}
+
+.cta-banner-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(90deg, rgba(8, 12, 28, 0.82) 0%, rgba(8, 12, 28, 0.62) 38%, rgba(8, 12, 28, 0.28) 62%, rgba(8, 12, 28, 0.18) 100%);
+}
+
+.cta-banner-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+
+.cta-banner-copy {
+    max-width: 620px;
+    color: #fff;
+}
+
+.cta-banner-badge {
+    margin-bottom: 24px;
+    border: 1px solid rgba(130, 92, 255, 0.55);
+    background: rgba(22, 26, 44, 0.35);
+    backdrop-filter: blur(10px);
+    color: #fff;
+}
+
+.cta-banner-title {
+    margin: 0 0 20px;
+    font-size: clamp(48px, 7vw, 88px);
+    line-height: 0.95;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #fff;
+}
+
+.cta-banner-line {
+    width: 88px;
+    height: 6px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #6a3df0 0%, #8f68ff 100%);
+    margin-bottom: 24px;
+}
+
+.cta-banner-text {
+    margin: 0 0 20px;
+    font-size: clamp(22px, 2.4vw, 30px);
+    line-height: 1.35;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.cta-banner-services {
+    margin: 0 0 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    font-size: 15px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-banner-services span {
+    color: #8f68ff;
+    font-weight: 700;
+}
+
+.cta-banner-btn {
+    min-width: 220px;
+    justify-content: center;
+    background: linear-gradient(135deg, #5b2dd1 0%, #7d52ff 100%);
+    box-shadow: 0 14px 34px rgba(91, 45, 209, 0.35);
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+
+    .cta-banner-box,
+    .cta-banner-content {
+        min-height: 560px;
+    }
+
+    .cta-banner-image {
+        object-position: 72% center;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .cta-visual-banner {
+        padding: 16px 0;
+    }
+
+    .cta-banner-box,
+    .cta-banner-content {
+        min-height: 500px;
+        border-radius: 24px;
+    }
+
+    .cta-banner-image {
+        object-position: 78% center;
+    }
+
+    .cta-banner-overlay {
+        background:
+            linear-gradient(180deg, rgba(8, 12, 28, 0.78) 0%, rgba(8, 12, 28, 0.56) 45%, rgba(8, 12, 28, 0.72) 100%);
+    }
+
+    .cta-banner-copy {
+        max-width: 100%;
+        padding: 32px 0;
+    }
+
+    .cta-banner-title {
+        font-size: 52px;
+    }
+
+    .cta-banner-btn {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .cta-banner-box,
+    .cta-banner-content {
+        min-height: 440px;
+    }
+
+    .cta-banner-title {
+        font-size: 42px;
+    }
+
+    .cta-banner-text {
+        font-size: 20px;
+    }
+
+    .cta-banner-services {
+        font-size: 13px;
+        gap: 8px 10px;
+    }
+}
