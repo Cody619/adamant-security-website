@@ -988,6 +988,7 @@ body {
     transform: scale(1.05);
 }
 
+
 @keyframes brands-scroll {
     from {
         transform: translateX(0);
